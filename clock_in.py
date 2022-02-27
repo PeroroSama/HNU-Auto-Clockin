@@ -43,7 +43,7 @@ def login():
 
 def setLocation():
     location = json.loads(requests.get(f'http://api.tianditu.gov.cn/geocoder?ds={{"keyWord":\"{args.province+args.city+args.county}\"}}&tk=2355cd686a32d016021bffbc4a69d880').text)["location"]
-    real_address = "。" # 在此填写详细地址
+    real_address = "1区3栋623" # 在此填写详细地址
     return location["lon"], location["lat"], real_address
 
 def main():
